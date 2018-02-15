@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Car Loan Calculator</string>
+    <string name="Bill_ammount_text">Car Cost($)</string>
+    <string name="DownPayment_text">Down Payment</string>
+    <string name="textseekbar">Length of Loan/Lease</string>
+    <string name="splitbillText">Split Bill?</string>
+    <string name="MonthlyBill_text">Monthly Bill:</string>
+    <string name="APR_Text">APR(x.xx%):</string>
+    <string name="Calculatebutton">Calculate</string>
+    <string name="SeekbarDisplay">15 Months</string>
+    <string name="rbutton1">Loan</string>
+    <string name="rbutton2">Lease</string>
+</resources>

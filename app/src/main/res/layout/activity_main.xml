@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.car_loan_calculator.MainActivity"
+    android:background="#CCFFFF">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bill_ammount_text"
+        android:textSize="32sp"
+        android:id="@+id/Car_Cost_text" />
+    <EditText
+        android:id="@+id/Car_Cost_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:imeOptions="flagNoExtractUi" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Car_Cost_text"
+        android:text="@string/DownPayment_text"
+        android:textSize="32sp"
+        android:id="@+id/DownPayment_text" />
+    <EditText
+        android:id="@+id/DownPayment_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Car_Cost_input"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:imeOptions="flagNoExtractUi"  />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/APR_Text"
+        android:layout_below="@id/DownPayment_text"
+        android:text="@string/APR_Text"
+        android:textSize="33sp"/>
+    <EditText
+        android:id="@+id/APR_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/DownPayment_input"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:imeOptions="flagNoExtractUi"  />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/rgroup"
+        android:layout_below="@id/APR_input"
+        android:orientation="horizontal"
+        android:checkedButton="@id/rbutton1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbutton1"
+            android:textSize="25sp"
+            android:id="@+id/rbutton1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbutton2"
+            android:textSize="25sp"
+            android:id="@+id/rbutton2" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textseekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgroup"
+        android:text="@string/textseekbar"
+        android:gravity="center"
+        android:textSize="35sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SeekbarDisplay"
+        android:layout_below="@+id/textseekbar"
+        android:selectAllOnFocus="true"
+        android:text="@string/SeekbarDisplay"
+        android:textSize="20sp"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SeekbarDisplay"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/seekbar"
+        android:max="60"
+        android:progress="15"  />
+    <Button
+        android:id="@+id/Calculatebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/Calculatebutton"
+        android:onClick="onClickBtn"  />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MonthlyBill_text"
+        android:layout_below="@id/Calculatebutton"
+        android:text="@string/MonthlyBill_text"
+        android:textSize="26sp"  />
+    <TextView
+        android:id="@+id/MonthlyBill_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Calculatebutton"
+        android:ems="11"
+        android:textSize="30sp"
+        android:layout_toRightOf="@id/MonthlyBill_text"
+        android:layout_toEndOf="@id/MonthlyBill_text"/>
+</RelativeLayout>
+
+
